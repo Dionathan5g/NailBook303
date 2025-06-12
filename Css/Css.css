@@ -1,89 +1,111 @@
-/* CORES E VARIÁVEIS (mantendo o tema original) */
+/* CSS.css - Padronização mantendo o tema original */
+
+/* CORES PRINCIPAIS (baseadas no tema atual) */
 :root {
-  --primary: #e91e63;       /* Rosa mais vibrante - mantendo o tom original */
-  --primary-light: #ff6090; /* Tom mais claro */
-  --primary-dark: #b0003a;  /* Tom mais escuro */
-  --secondary: #f8bbd0;     /* Rosa claro para fundos */
-  --text: #212121;          /* Preto para texto */
-  --text-light: #757575;    /* Cinza para texto secundário */
-  --white: #ffffff;         /* Branco */
-  --divider: #e0e0e0;       /* Linhas divisórias */
+  --vermelho-principal: #e74c3c;     /* Vermelho original */
+  --rosa-principal: #ff6b81;         /* Rosa original */
+  --rosa-claro: #ffd3d3;             /* Rosa claro para fundos */
+  --vermelho-escuro: #c0392b;        /* Tom mais escuro */
+  --texto-escuro: #2c3e50;           /* Cor de texto principal */
+  --texto-cinza: #7f8c8d;            /* Texto secundário */
+  --branco: #ffffff;                 /* Branco */
+  --cinza-borda: #ecf0f1;            /* Bordas e divisórias */
 }
 
 /* RESET E ESTILOS GERAIS */
-* {
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: var(--texto-escuro);
 }
 
-body {
-  background-color: #fafafa;
-  color: var(--text);
+/* HEADER (mantendo estilo original) */
+.header {
+  background-color: var(--vermelho-principal);
+  color: var(--branco);
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* NAVEGAÇÃO */
+.navbar {
+  background-color: var(--rosa-principal);
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: var(--branco);
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: var(--vermelho-escuro);
 }
 
 /* BOTÕES PADRONIZADOS */
 .btn {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--rosa-principal);
+  color: var(--branco);
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
-  font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-size: 14px;
+  transition: all 0.3s;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn:hover {
-  background-color: var(--primary-dark);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background-color: var(--vermelho-escuro);
+  transform: translateY(-2px);
+}
+
+.btn-vermelho {
+  background-color: var(--vermelho-principal);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  border: 1px solid var(--rosa-principal);
+  color: var(--rosa-principal);
 }
 
-.btn-outline:hover {
-  background-color: var(--primary);
-  color: var(--white);
-}
-
-/* FORMULÁRIOS PADRONIZADOS */
+/* FORMULÁRIOS */
 .form-group {
   margin-bottom: 15px;
 }
 
 .form-control {
   width: 100%;
-  padding: 10px 15px;
-  border: 1px solid var(--divider);
+  padding: 10px;
+  border: 1px solid var(--cinza-borda);
   border-radius: 4px;
   font-size: 14px;
-  transition: border 0.3s;
 }
 
 .form-control:focus {
-  border-color: var(--primary);
+  border-color: var(--rosa-principal);
   outline: none;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-  color: var(--text-light);
+  color: var(--texto-cinza);
   font-size: 13px;
-  font-weight: 500;
 }
 
-/* CARDS PADRONIZADOS */
+/* CARDS */
 .card {
-  background: var(--white);
+  background: var(--branco);
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   padding: 20px;
@@ -91,92 +113,54 @@ label {
 }
 
 .card-title {
-  color: var(--primary);
-  font-size: 18px;
+  color: var(--rosa-principal);
   margin-bottom: 15px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid var(--cinza-borda);
 }
 
-/* TABELAS PADRONIZADAS */
+/* TABELAS */
 .table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 .table th {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 12px 15px;
+  background-color: var(--rosa-principal);
+  color: var(--branco);
+  padding: 12px;
   text-align: left;
 }
 
 .table td {
-  padding: 10px 15px;
-  border-bottom: 1px solid var(--divider);
+  padding: 10px;
+  border-bottom: 1px solid var(--cinza-borda);
 }
 
-.table tr:hover {
-  background-color: var(--secondary);
+.table tr:nth-child(even) {
+  background-color: var(--rosa-claro);
 }
 
-/* HEADER PADRONIZADO */
-.header {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.header-title {
-  font-size: 20px;
-  font-weight: 500;
-}
-
-/* NAVEGAÇÃO */
-.nav {
+/* RELATÓRIOS */
+.report-header {
   display: flex;
-  background-color: var(--primary-dark);
-  padding: 0 20px;
-}
-
-.nav-item {
-  color: var(--white);
-  padding: 15px 20px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s;
-}
-
-.nav-item:hover {
-  background-color: rgba(255,255,255,0.1);
-}
-
-/* RELATÓRIOS PADRONIZADOS */
-.report-container {
-  background: var(--white);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  margin: 20px 0;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
 }
 
 .report-title {
-  color: var(--primary);
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--divider);
+  color: var(--vermelho-principal);
+  margin: 0;
 }
 
-.report-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  color: var(--text-light);
-  font-size: 13px;
+.report-date {
+  color: var(--texto-cinza);
+  font-size: 14px;
 }
 
-/* ALERTAS/MENSAGENS */
+/* ALERTAS */
 .alert {
   padding: 10px 15px;
   border-radius: 4px;
@@ -184,13 +168,35 @@ label {
 }
 
 .alert-success {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  border: 1px solid #c8e6c9;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
 }
 
 .alert-error {
-  background-color: #ffebee;
-  color: #c62828;
-  border: 1px solid #ffcdd2;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--texto-escuro);
+  color: var(--branco);
+  margin-top: 30px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .navbar a {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .report-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
